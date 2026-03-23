@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Define MVP scope for property tool",
+    "owner": "Maple",
+    "role": "Orchestrator",
+    "status": "backlog",
+    "priority": "high",
+    "due_date": "2026-03-25",
+    "description": "Break the initial release into discrete deliverables and acceptance criteria.",
+    "context": "Need to lock scope so Steve/Sophie can parallelize. Inputs: Daniel's goals, Amy's research, current data availability.",
+    "next_steps": "Draft doc → review with Daniel → publish to team dashboard.",
+    "avatar": ""
+  },
+  {
+    "title": "Ingest council sales data",
+    "owner": "Sophie",
+    "role": "Data Ops",
+    "status": "in-progress",
+    "priority": "high",
+    "due_date": "2026-03-27",
+    "description": "Normalize the latest property sale exports and publish a clean dataset for engineering.",
+    "context": "Data drop located in /data/raw/council. Need consistent suburb IDs + price normalization.",
+    "next_steps": "Run cleaning notebook → validate sample with Maple → export to /data/clean/council/latest.",
+    "avatar": ""
+  },
+  {
+    "title": "Prototype suburb scoring algorithm",
+    "owner": "Steve",
+    "role": "Engineering",
+    "status": "review",
+    "priority": "medium",
+    "due_date": "2026-03-24",
+    "description": "Implement the first pass of the scoring logic using Sophie’s cleaned data.",
+    "context": "Weights currently guesswork; waiting on Amy's insights. Focus on modular design for future tuning.",
+    "next_steps": "Code review with Maple → integrate feedback → prep demo for Daniel.",
+    "avatar": ""
+  },
+  {
+    "title": "Security baseline audit",
+    "owner": "Ben",
+    "role": "Systems",
+    "status": "backlog",
+    "priority": "medium",
+    "due_date": "2026-03-28",
+    "description": "Run through access, backups, and logging to ensure the new workflows are covered.",
+    "context": "Focus on repo access, automation secrets, and backup verifications for scripts/daily_backup.sh.",
+    "next_steps": "Prepare checklist → execute sweeps → deliver report + recommendations.",
+    "avatar": ""
+  },
+  {
+    "title": "Interview 5 buyer’s agents",
+    "owner": "Amy",
+    "role": "Research & Marketing",
+    "status": "in-progress",
+    "priority": "high",
+    "due_date": "2026-03-26",
+    "description": "Validate core pains and positioning for the property tool story.",
+    "context": "Need geographic diversity (NSW & VIC) and mix of boutique + franchise agents.",
+    "next_steps": "Finalize discussion guide → run interviews → synthesize findings deck.",
+    "avatar": ""
+  }
+]

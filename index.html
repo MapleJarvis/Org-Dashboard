@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Operations Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-mark">🏢</div>
+        <div>
+          <p class="label">Hierarchy</p>
+          <p class="subtext">Ops Control</p>
+        </div>
+      </div>
+      <div class="board-meta">
+        <p class="meta-label">Board owner</p>
+        <p class="meta-value">Daniel → Maple</p>
+      </div>
+      <nav class="board-links">
+        <p class="section-title">Views</p>
+        <button class="nav-btn active">Company Board</button>
+        <button class="nav-btn" disabled>Pipeline (soon)</button>
+      </nav>
+      <div class="sidebar-footer">
+        <p class="meta-label">Last synced</p>
+        <p id="lastSynced" class="meta-value">–</p>
+        <button id="downloadJson" class="primary-btn">Export JSON</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="top-bar">
+        <div>
+          <p class="board-title">Company Status Dashboard</p>
+          <p class="board-subtitle">Live view of Maple’s workstreams</p>
+        </div>
+        <div class="top-actions">
+          <input type="search" id="searchInput" placeholder="Search tasks" />
+          <button id="refreshBtn" class="ghost-btn">↻ Refresh</button>
+          <button id="addTask" class="primary-btn">+ Add Task</button>
+        </div>
+      </header>
+
+      <section class="lanes" id="lanes"></section>
+    </main>
+  </div>
+
+  <div id="taskModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close-btn" id="closeModal">×</button>
+      <form id="taskForm">
+        <p class="modal-title" id="modalTitle">Task details</p>
+        <p class="modal-subtitle" id="modalMeta"></p>
+
+        <label>
+          Task title
+          <input id="taskTitle" type="text" placeholder="Name this task" required />
+        </label>
+
+        <label>
+          Owner
+          <input id="taskOwner" list="ownerOptions" placeholder="Who's accountable?" required />
+          <datalist id="ownerOptions">
+            <option value="Daniel"></option>
+            <option value="Maple"></option>
+            <option value="Steve"></option>
+            <option value="Sophie"></option>
+            <option value="Amy"></option>
+            <option value="Ben"></option>
+          </datalist>
+        </label>
+
+        <label>
+          Role / function
+          <input id="taskRole" type="text" placeholder="e.g. Engineering, Data Ops" />
+        </label>
+
+        <div class="form-row">
+          <label>
+            Status
+            <select id="taskStatus">
+              <option value="backlog">Backlog</option>
+              <option value="in-progress">In Progress</option>
+              <option value="review">Review</option>
+              <option value="done">Complete</option>
+            </select>
+          </label>
+          <label>
+            Priority
+            <select id="taskPriority">
+              <option value="high">High</option>
+              <option value="medium" selected>Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Due date
+          <input id="taskDue" type="date" />
+        </label>
+
+        <label>
+          Task description
+          <textarea id="taskDescription" rows="3" placeholder="What needs to happen?" required></textarea>
+        </label>
+
+        <label>
+          Context & background
+          <textarea id="taskContext" rows="3" placeholder="Add extra notes, dependencies, links"></textarea>
+        </label>
+
+        <label>
+          Next steps / guidance
+          <textarea id="taskNextSteps" rows="3" placeholder="Outline the plan so anyone can pick it up"></textarea>
+        </label>
+
+        <div class="modal-actions">
+          <button type="button" class="ghost-btn" id="cancelModal">Cancel</button>
+          <button type="submit" class="primary-btn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
