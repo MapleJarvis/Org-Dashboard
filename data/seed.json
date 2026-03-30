@@ -7,13 +7,13 @@
     "priority": "high",
     "due_date": "2026-03-25",
     "description": "Break the initial release into discrete deliverables and acceptance criteria.",
-    "context": "Need to lock scope so Steve/Sophie can parallelize. Inputs: Daniel's goals, Amy's research, current data availability.",
+    "context": "Need to lock scope so engineering and data tracks can parallelize. Inputs: Daniel's goals, early research, current data availability.",
     "next_steps": "Draft doc → review with Daniel → publish to team dashboard.",
     "avatar": ""
   },
   {
     "title": "Ingest council sales data",
-    "owner": "Sophie",
+    "owner": "Data Operations Lead",
     "role": "Data Ops",
     "status": "in-progress",
     "priority": "high",
@@ -25,19 +25,19 @@
   },
   {
     "title": "Prototype suburb scoring algorithm",
-    "owner": "Steve",
+    "owner": "Engineering Lead",
     "role": "Engineering",
     "status": "review",
     "priority": "medium",
     "due_date": "2026-03-24",
-    "description": "Implement the first pass of the scoring logic using Sophie’s cleaned data.",
-    "context": "Weights currently guesswork; waiting on Amy's insights. Focus on modular design for future tuning.",
+    "description": "Implement the first pass of the scoring logic using the data team’s cleaned dataset.",
+    "context": "Weights currently guesswork; waiting on new market insights. Focus on modular design for future tuning.",
     "next_steps": "Code review with Maple → integrate feedback → prep demo for Daniel.",
     "avatar": ""
   },
   {
     "title": "Security baseline audit",
-    "owner": "Ben",
+    "owner": "Systems & Security Lead",
     "role": "Systems",
     "status": "backlog",
     "priority": "medium",
@@ -49,7 +49,7 @@
   },
   {
     "title": "Interview 5 buyer’s agents",
-    "owner": "Amy",
+    "owner": "Research & Marketing Lead",
     "role": "Research & Marketing",
     "status": "in-progress",
     "priority": "high",

@@ -9,10 +9,10 @@ const SUPABASE_HEADERS = {
 const PEOPLE = {
   Daniel: { initials: "DJ", color: "#f97316", title: "Owner" },
   Maple: { initials: "MJ", color: "#38bdf8", title: "Orchestrator" },
-  Steve: { initials: "ST", color: "#a855f7", title: "Head Programmer" },
-  Sophie: { initials: "SO", color: "#22c55e", title: "Data Ops" },
-  Amy: { initials: "AM", color: "#eab308", title: "Research & Marketing" },
-  Ben: { initials: "BN", color: "#f43f5e", title: "Systems & Security" }
+  "Engineering Lead": { initials: "EN", color: "#a855f7", title: "Engineering" },
+  "Data Operations Lead": { initials: "DO", color: "#22c55e", title: "Data Ops" },
+  "Research & Marketing Lead": { initials: "RM", color: "#eab308", title: "Research & Marketing" },
+  "Systems & Security Lead": { initials: "SS", color: "#f43f5e", title: "Systems & Security" }
 };
 
 const lanesEl = document.getElementById("lanes");
